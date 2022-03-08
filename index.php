@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $monto_comp = $efectivo * pow((1+$interes), $tiempo);
         $json = array("monto"=>$monto_comp);
         header("HTTP/1.1 200 OK");
-        echo json_encode($monto_comp);
+        echo json_encode($json);
     }
 
 }
