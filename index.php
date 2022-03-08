@@ -8,9 +8,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $tiempo = floatval($_GET['tiempo']);
         $interes = floatval($_GET['interes']);
         $monto_comp = $efectivo * pow((1+$interes), $tiempo);
-        $json = array("monto"=>$monto_comp);
         header("HTTP/1.1 200 OK");
-        echo json_encode($json);
+        echo json_encode($monto_comp);
     }
 
 }
